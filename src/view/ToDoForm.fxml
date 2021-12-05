@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="676.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ToDoFormController">
+   <children>
+      <ListView fx:id="lstToDo" layoutX="14.0" layoutY="14.0" prefHeight="640.0" prefWidth="492.0" />
+      <Label fx:id="lblBanner" layoutX="520.0" layoutY="14.0" text="Hi User Welcome to To-Do List">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserID" layoutX="1053.0" layoutY="14.0" text="U001">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSelectedToDo" layoutX="520.0" layoutY="55.0" prefHeight="42.0" prefWidth="576.0" style="-fx-background-radius: 8;" />
+      <Button fx:id="btnUpdate" layoutX="956.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="52.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #079992;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="808.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="52.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #eb4d4b;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="520.0" layoutY="204.0" prefHeight="0.0" prefWidth="576.0" />
+      <Button layoutX="520.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnAddNewToDoOnAction" prefHeight="52.0" prefWidth="282.0" style="-fx-background-radius: 5; -fx-background-color: #4a69bd;" text="+ Add New ToDo" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane fx:id="subRoot" layoutX="520.0" layoutY="325.0" prefHeight="200.0" prefWidth="576.0" style="-fx-border-color: black;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Task Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDescription" layoutX="14.0" layoutY="55.0" prefHeight="42.0" prefWidth="552.0" style="-fx-background-radius: 8;" />
+            <Button layoutX="284.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="52.0" prefWidth="282.0" style="-fx-background-radius: 5; -fx-background-color: #079992;" text="Add To List" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="520.0" layoutY="598.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="52.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #079992;" text="&lt;&lt; Log Out" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="66.0" fitWidth="57.0" layoutX="1038.0" layoutY="593.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ebay-logo-rafabay-store.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
